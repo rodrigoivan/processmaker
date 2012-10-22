@@ -45,7 +45,7 @@ public class dynaform{
         element=element.findElement(By.xpath("tbody/tr/td/table/tbody/tr/td[12]/a/div"));
         element.click();
 
-        element=driver=findElement(By.id("form[PME_XMLNODE_NAME]"));
+        element=driver.findElement(By.id("form[PME_XMLNODE_NAME]"));
         element.sendKeys("Dynaform");
         element=driver.findElement(By.id("form[PME_LABEL]"));
         element.sendKeys("Datos personales");
@@ -56,7 +56,7 @@ public class dynaform{
         //element.click();
         //campo de texto nombre
         element=driver.findElement(By.id("fields_Toolbar"));
-        element=element.find(By.xpath("tbody/tr/td/table/tbody/tr/td[5]/a/div"));
+        element=element.findElement(By.xpath("tbody/tr/td/table/tbody/tr/td[5]/a/div"));
         element.click();
         element=driver.findElement(By.id("form[PME_XMLNODE_NAME]"));
         element.sendKeys("nombre");
@@ -66,7 +66,7 @@ public class dynaform{
         element.click();
 //campo de texto apellido
        element=driver.findElement(By.id("fields_Toolbar"));
-        element=element.find(By.xpath("tbody/tr/td/table/tbody/tr/td[5]/a/div"));
+        element=element.findElement(By.xpath("tbody/tr/td/table/tbody/tr/td[5]/a/div"));
         element.click();
          element=driver.findElement(By.id("form[PME_XMLNODE_NAME]"));
         element.sendKeys("apellido");
@@ -76,7 +76,7 @@ public class dynaform{
         element.click();
         //seleccionar campo de texto
         element=driver.findElement(By.id("fields_Toolbar"));
-        element=element.find(By.xpath("tbody/tr/td/table/tbody/tr/td[5]/a/div"));
+        element=element.findElement(By.xpath("tbody/tr/td/table/tbody/tr/td[5]/a/div"));
         element.click();
          //crear campo de texto edad
          element=driver.findElement(By.id("form[PME_XMLNODE_NAME]"));
@@ -87,7 +87,7 @@ public class dynaform{
         element.click();
         //seleccionar el campo email
          element=driver.findElement(By.id("fields_Toolbar"));
-        element=element.find(By.xpath("tbody/tr/td/table/tbody/tr/td[5]/a/div"));
+        element=element.findElement(By.xpath("tbody/tr/td/table/tbody/tr/td[5]/a/div"));
         element.click();
         //creacion del campo email
          element=driver.findElement(By.id("form[PME_XMLNODE_NAME]"));
@@ -100,20 +100,20 @@ public class dynaform{
         element.click();
         //seleccionar area de texto
           element=driver.findElement(By.id("fields_Toolbar"));
-        element=element.find(By.xpath("tbody/tr/td/table/tbody/tr/td[10]/a/div"));
+        element=element.findElement(By.xpath("tbody/tr/td/table/tbody/tr/td[10]/a/div"));
         element.click();
         //creacion del campo area de texto
         element=driver.findElement(By.id("form[PME_XMLNODE_NAME]"));
         element.sendKeys("observaciones");
-        element=driver.findElement(by.id("form[PME_LABEL]"));
+        element=driver.findElement(By.id("form[PME_LABEL]"));
         element.sendKeys("observaciones");
-        element=driver.findElement(by.id("form[PME_ACCEPT]"));
+        element=driver.findElement(By.id("form[PME_ACCEPT]"));
         element.click();
         //segundo titulo
         element=driver.findElement(By.id("fields_Toolbar"));
         element=element.findElement(By.xpath("tbody/tr/td/table/tbody/tr/td[12]/a/div"));
         element.click();
-        element=driver=findElement(By.id("form[PME_XMLNODE_NAME]"));
+        element=driver.findElement(By.id("form[PME_XMLNODE_NAME]"));
         element.sendKeys("economics");
         element=driver.findElement(By.id("form[PME_LABEL]"));
         element.sendKeys("Datos economicos");
@@ -121,7 +121,7 @@ public class dynaform{
         element.click();
         //seleccionar el campo currency
          element=driver.findElement(By.id("fields_Toolbar"));
-        element=element.find(By.xpath("tbody/tr/td/table/tbody/tr/td[6]/a/div"));
+        element=element.findElement(By.xpath("tbody/tr/td/table/tbody/tr/td[6]/a/div"));
         element.click();
         //creacion del campo monto
         element=driver.findElement(By.id("form[PME_XMLNODE_NAME]"));
@@ -132,53 +132,53 @@ public class dynaform{
         element.click();
         //seleccionar el campo porcentaje
          element=driver.findElement(By.id("fields_Toolbar"));
-        element=element.find(By.xpath("tbody/tr/td/table/tbody/tr/td[7]/a/div"));
+        element=element.findElement(By.xpath("tbody/tr/td/table/tbody/tr/td[7]/a/div"));
         element.click();
         //creacion del campo porcenaje entero
-        element=driver.findElement("form[PME_XMLNODE_NAME]");
+        element=driver.findElement(By.id("form[PME_XMLNODE_NAME]"));
         element.sendKeys("porcentajeEntero");
-        element=driver.findElement("form[PME_LABEL]");
+        element=driver.findElement(By.id("form[PME_LABEL]"));
         element.sendKeys("porcentaje Entero");
         element=driver.findElement(By.id("form[PME_ACCEPT]"));
         element.click();
         //seleccionar el campo porcentaje
           element=driver.findElement(By.id("fields_Toolbar"));
-        element=element.find(By.xpath("tbody/tr/td/table/tbody/tr/td[7]/a/div"));
+        element=element.findElement(By.xpath("tbody/tr/td/table/tbody/tr/td[7]/a/div"));
         element.click();
         //creacion del campo porcentaje Real
-        element=driver.findElement("form[PME_XMLNODE_NAME]");
+        element=driver.findElement(By.id("form[PME_XMLNODE_NAME]"));
         element.sendKeys("porcentajeReal");
-        element=driver.findElement("form[PME_LABEL]");
+        element=driver.findElement(By.id("form[PME_LABEL]"));
         element.sendKeys("porcentaje Real");
         element=driver.findElement(By.id("form[PME_ACCEPT]"));
         element.click();
         //seleccionar el campo password
          element=driver.findElement(By.id("fields_Toolbar"));
-        element=element.find(By.xpath("tbody/tr/td/table/tbody/tr/td[8]/a/div"));
+        element=element.findElement(By.xpath("tbody/tr/td/table/tbody/tr/td[8]/a/div"));
         element.click();
         //creacion del campo password
         element=driver.findElement(By.id("form[PME_XMLNODE_NAME]"));
         element.sendKeys("password");
         element=driver.findElement(By.id("form[PME_LABEL]"));
         element.sendKeys("password");
-        element=driver.findElement(by.id("form[PME_ACCEPT]"));
+        element=driver.findElement(By.id("form[PME_ACCEPT]"));
         element.click();
         //seleccionar el campo suggest
           element=driver.findElement(By.id("fields_Toolbar"));
-        element=element.find(By.xpath("tbody/tr/td/table/tbody/tr/td[9]/a/div"));
+        element=element.findElement(By.xpath("tbody/tr/td/table/tbody/tr/td[9]/a/div"));
         element.click();
         //creacion del campo suggest
         element=driver.findElement(By.id("form[PME_XMLNODE_NAME]"));
         element.sendKeys("suggest");
         element=driver.findElement(By.id("form[PME_LABEL]"));
         element.sendKeys("suggest");
-        element=driver.findElement(by.id("form[PME_XMLNODE_VALUE]"));
-        element.sendKeys("SELECT USR_UID, USR_USERNAME, CONCAT(USR_FIRSTNAME, " ", USR_LASTNAME) FROM USERS ");
+        element=driver.findElement(By.id("form[PME_XMLNODE_VALUE]"));
+        element.sendKeys("SELECT USR_UID, USR_USERNAME, CONCAT(USR_FIRSTNAME, '', USR_LASTNAME FROM USERS");
         element=driver.findElement(By.id("form[PME_ACCEPT]"));
         element.click();
         //seleccionar campo dropdown
          element=driver.findElement(By.id("fields_Toolbar"));
-        element=element.find(By.xpath("tbody/tr/td/table/tbody/tr/td[19]/a/div"));
+        element=element.findElement(By.xpath("tbody/tr/td/table/tbody/tr/td[19]/a/div"));
         element.click();
         //cr3acion del campo dropdown
         element=driver.findElement(By.id("form[PME_XMLNODE_NAME]"));
@@ -192,26 +192,26 @@ public class dynaform{
         element.sendKeys("ingenieria de sistemas");
         element=driver.findElement(By.id("form[PME_OPTIONS][addLink]"));
         element.click();
-        element=driver.findElement(By.id("form[PME_OPTIONS][1][NAME]"));
+        element=driver.findElement(By.id("form[PME_OPTIONS][2][NAME]"));
         element.sendKeys("electronica");
-        element=driver.findElement(By.id("form[PME_OPTIONS][1][LABEL]"));
+        element=driver.findElement(By.id("form[PME_OPTIONS][2][LABEL]"));
         element.sendKeys("ingenieria electronica");
         element=driver.findElement(By.id("form[PME_ACCEPT]"));
         element.click();
         //seleccionar dropdown yes/no
          element=driver.findElement(By.id("fields_Toolbar"));
-        element=element.find(By.xpath("tbody/tr/td/table/tbody/tr/td[20]/a/div"));
+        element=element.findElement(By.xpath("tbody/tr/td/table/tbody/tr/td[20]/a/div"));
         element.click();
         //crear campo dropdown yes/no
         element=driver.findElement(By.id("form[PME_XMLNODE_NAME]"));
         element.sendKeys("YesNo");
-        element=driver.findElement(By.id("form[PME_ACCEPT]"));
+        element=driver.findElement(By.id("form[PME_LABEL]"));
         element.sendKeys("yes/no");
         element=driver.findElement(By.id("form[PME_ACCEPT]"));
-        elemenc.click();
+        element.click();
         //seleccionar campo listbox
            element=driver.findElement(By.id("fields_Toolbar"));
-        element=element.find(By.xpath("tbody/tr/td/table/tbody/tr/td[21]/a/div"));
+        element=element.findElement(By.xpath("tbody/tr/td/table/tbody/tr/td[21]/a/div"));
         element.click();
         //crear campo listbox
         element=driver.findElement(By.id("form[PME_XMLNODE_NAME]"));
@@ -227,12 +227,105 @@ public class dynaform{
         element=driver.findElement(By.id("form[PME_OPTIONS][addLink]"));
         element.click();
         //agregar nuevo elemento al listbox
-        element=driver.findElement(By.id("form[PME_OPTIONS][1][NAME]"));
+        element=driver.findElement(By.id("form[PME_OPTIONS][2][NAME]"));
         element.sendKeys("currency");
-        element=driver.findElement(By.id("form[PME_OPTIONS][1][LABEL]"));
+        element=driver.findElement(By.id("form[PME_OPTIONS][2][LABEL]"));
         element.sendKeys("currency");
         element=driver.findElement(By.id("form[PME_ACCEPT]"));
         element.click();
+        //seleccionar el campo checkbox
+         element=driver.findElement(By.id("fields_Toolbar"));
+        element=element.findElement(By.xpath("tbody/tr/td/table/tbody/tr/td[23]/a/div"));
+        element.click();
+        //crear el campo checkbox
+        element=driver.findElement(By.id("form[PME_XMLNODE_NAME]"));
+        element.sendKeys("checkbox");
+        element=driver.findElement(By.id("form[PME_LABEL]"));
+        element.sendKeys("checkbox");
+        element=driver.findElement(By.id("form[PME_ACCEPT]"));
+        element.click();
+        //seleccionar campo checkGroup
+         element=driver.findElement(By.id("fields_Toolbar"));
+        element=element.findElement(By.xpath("tbody/tr/td/table/tbody/tr/td[24]/a/div"));
+        element.click();
+        //crear campo checkGroup
+        element=driver.findElement(By.id("form[PME_XMLNODE_NAME]"));
+        element.sendKeys("checkgroup");
+        element=driver.findElement(By.id("form[PME_LABEL]"));
+        element.sendKeys("checkgroup");
+        //agregar nuevo elemento al checkgroup
+        element=driver.findElement(By.id("form[PME_OPTIONS][addLink]"));
+        element.click();
+
+        //agregar elementos al checkgroup
+        element=driver.findElement(By.id("form[PME_OPTIONS][1][NAME]"));
+        element.sendKeys("elegir");
+        element=driver.findElement(By.id("form[PME_OPTIONS][1][LABEL]"));
+        element.sendKeys("elegir");
+        element=driver.findElement(By.id("form[PME_OPTIONS][2][NAME]"));
+        element.sendKeys("elegir2");
+        element=driver.findElement(By.id("form[PME_OPTIONS][2][LABEL]"));
+        element.sendKeys("elegir 2");
+        element=driver.findElement(By.id("form[PME_ACCEPT]"));
+        element.click();
+        //seleccionar campo radioGroup
+        element=driver.findElement(By.id("fields_Toolbar"));
+        element=element.findElement(By.xpath("tbody/tr/td/table/tbody/tr/td[25]/a/div"));
+        element.click();
+        //creaar campo radioGroup
+        element=driver.findElement(By.id("form[PME_XMLNODE_NAME]"));
+        element.sendKeys("radiogroup");
+        element=driver.findElement(By.id("form[PME_LABEL]"));
+        element.sendKeys("radiogroup");
+        //agregar nuevo elemento
+        element=driver.findElement(By.id("form[PME_OPTIONS][addLink]"));
+        element.click();
+            element=driver.findElement(By.id("form[PME_OPTIONS][1][NAME]"));
+            element.sendKeys("ejemplo");
+            element=driver.findElement(By.id("form[PME_OPTIONS][1][LABEL]"));
+            element.sendKeys("ejemplo");
+            element=driver.findElement(By.id("form[PME_OPTIONS][2][NAME]"));
+            element.sendKeys("ejemplo1");
+            element=driver.findElement(By.id("form[PME_OPTIONS][2][LABEL]"));
+            element.sendKeys("ejemplo 1");
+            element=driver.findElement(By.id("form[PME_ACCEPT]"));
+            element.click();
+            //seleccionar campo Date
+            element=driver.findElement(By.id("fields_Toolbar"));
+        element=element.findElement(By.xpath("tbody/tr/td/table/tbody/tr/td[27]/a/div"));
+        element.click();
+            //crear campo Date
+        element=driver.findElement(By.id("form[PME_XMLNODE_NAME]"));
+        element.sendKeys("fecha");
+        element=driver.findElement(By.id("form[PME_LABEL]"));
+        element.sendKeys("fecha");
+        element=driver.findElement(By.id("form[PME_ACCEPT]"));
+        element.click();
+        //seleccionar campo button
+          element=driver.findElement(By.id("fields_Toolbar"));
+        element=element.findElement(By.xpath("tbody/tr/td/table/tbody/tr/td[16]/a/div"));
+        element.click();
+        //crear campo button
+        element=driver.findElement(By.id("form[PME_XMLNODE_NAME]"));
+        element.sendKeys("guardar");
+        element=driver.findElement(By.id("form[PME_LABEL]"));
+        element.sendKeys("guardar");
+        element=driver.findElement(By.id("form[PME_ACCEPT]"));
+        element.click();
+
+        //seleccionar elemento guardar
+          //element=driver.findElement(By.id("fields_Toolbar"));
+        //element=element.find(By.xpath("tbody/tr/td/table/tbody/tr/td[2]/a/div"));
+        //element.click();
+
+            
+
+
+
+
+
+
+
 
 
 
