@@ -23,7 +23,7 @@ public class InputDocProcessTest{
     public static void setUpBeforeClass() throws Exception{
         driver = new ChromeDriver();
         //testChrome = new WebDriverFunctionsPMOS2(driver,0);
-        driver.get("http://192.168.11.132/sys/en/classic/login/login");
+        driver.get("http://192.168.11.132");
 
     }
 
@@ -108,58 +108,8 @@ public class InputDocProcessTest{
         
 
         /*WebDriverWait wait = new WebDriverWait(driver,10);
-        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("table/tbody/tr/td[1]/div/b")));
 
-
-        WebElement grd2 = driver.findElement(By.id("gridpanel"));
-        List<WebElement> elem3 = grd2.findElements(By.xpath("div/div[2]/div/div[1]/div[2]/div/div"));
-        
-
-
-
-
-        for(WebElement el3:elem3)
-            if(el3.findElement(By.xpath("table/tbody/tr/td[1]/div/b")).getText().equals("krlos_1.doc"))
-            {
-                elem = el3;
-                break;
-            }
-            
-            
-
-
-
-        if(elem==null)
-            System.out.println("no se encontr\u00FB el archivo"); //talvez se deberia lanzar un error
-        else
-        {
-            elem.click();
-
-            //WebElement elem4 = grd2.findElement(By.xpath("div/div[1]/div/table/tbody/tr/td[1]/table/tbody/tr/td[11]/table/tbody/tr[2]/td[2]/em/button"));
-            //elem4.click();
-            //action.perform();
-        }*/
-
-        //System.out.println(elem3.size());
-
-
-        
-
-        //wait.until(ExpectedConditions.textToBePresentInElementValue(By.xpath("//div[@id='"+grid.getAttribute("id")+"']/div/div[3]/div/table/tbody/tr/td/table/tbody/tr/td[5]/input"),"1"))
-
-
-
-        /*try{
-             
-
-            elem = driver.findElement(By.xpath("//div[@id='gridpanel']/div/div[2]/div//div[b='Receipts_admin']/b"));
-            elem.click();
-            elem = driver.findElement(By.xpath("//div[@id='gridpanel']/div/div[2]/div/div[1]/div[2]/div/div//div[b='krlos_1.doc']/b"));
-            elem.click();
-            
-        }catch(java.lang.StringIndexOutOfBoundsException e){
-            System.out.println("El elemento no esta disponible");
-        }*/
+        */
         
 
 
@@ -242,4 +192,5 @@ public class InputDocProcessTest{
         System.out.println("Execution completed.....");
         //driver.quit(); //if you want to stop the webdriver after execution, then remove the comment
     }
+
 }
