@@ -63,7 +63,7 @@ public class Designer{
 
 		Actions action = new Actions(Browser.driver());
 				
-		(new Actions(Browser.driver())).dragAndDrop(Browser.driver().findElement(By.xpath("//*[@id='pm_target']/div[2]/div[1]/div[3]/div/img[8]")), task).build().perform();
+		(new Actions(Browser.driver())).dragAndDrop(Browser.getElement("designer.webElement.initialTask"), task).build().perform();
 
 		return true;
 	}
@@ -78,7 +78,7 @@ public class Designer{
 
 		Actions action = new Actions(Browser.driver());
 				
-		(new Actions(Browser.driver())).dragAndDrop(Browser.driver().findElement(By.xpath("//*[@id='pm_target']/div[2]/div[1]/div[3]/div/img[1]")), task1).build().perform();
+		(new Actions(Browser.driver())).dragAndDrop(Browser.getElement("designer.webElement.sequential"), task1).build().perform();
 
 		(new Actions(Browser.driver())).dragAndDropBy(task2, 0, 0).build().perform(); 
 
@@ -96,7 +96,7 @@ public class Designer{
 
 		Actions action = new Actions(Browser.driver());
 				
-		(new Actions(Browser.driver())).dragAndDrop(Browser.driver().findElement(By.xpath("//*[@id='pm_target']/div[2]/div[1]/div[3]/div/img[2]")), task1).build().perform();
+		(new Actions(Browser.driver())).dragAndDrop(Browser.getElement("designer.webElement.selection"), task1).build().perform();
 
 		(new Actions(Browser.driver())).dragAndDropBy(task2, 0, 0).build().perform(); 
 
@@ -119,7 +119,7 @@ public class Designer{
 
 		Actions action = new Actions(Browser.driver());
 				
-		(new Actions(Browser.driver())).dragAndDrop(Browser.driver().findElement(By.xpath("//*[@id='pm_target']/div[2]/div[1]/div[3]/div/img[3]")), task1).build().perform();
+		(new Actions(Browser.driver())).dragAndDrop(Browser.getElement("designer.webElement.evaluation"), task1).build().perform();
 
 		(new Actions(Browser.driver())).dragAndDropBy(task2, 0, 0).build().perform(); 
 
@@ -142,7 +142,7 @@ public class Designer{
 
 		Actions action = new Actions(Browser.driver());
 				
-		(new Actions(Browser.driver())).dragAndDrop(Browser.driver().findElement(By.xpath("//*[@id='pm_target']/div[2]/div[1]/div[3]/div/img[4]")), task1).build().perform();
+		(new Actions(Browser.driver())).dragAndDrop(Browser.getElement("designer.webElement.parallelFork"), task1).build().perform();
 
 		(new Actions(Browser.driver())).dragAndDropBy(task2, 0, 0).build().perform();
 
@@ -165,7 +165,7 @@ public class Designer{
 
 		Actions action = new Actions(Browser.driver());
 				
-		(new Actions(Browser.driver())).dragAndDrop(Browser.driver().findElement(By.xpath("//*[@id='pm_target']/div[2]/div[1]/div[3]/div/img[5]")), task1).build().perform();
+		(new Actions(Browser.driver())).dragAndDrop(Browser.getElement("designer.webElement.parallelByEvaluation"), task1).build().perform();
 
 		(new Actions(Browser.driver())).dragAndDropBy(task2, 0, 0).build().perform();
 
@@ -188,7 +188,7 @@ public class Designer{
 
 		Actions action = new Actions(Browser.driver());
 				
-		(new Actions(Browser.driver())).dragAndDrop(Browser.driver().findElement(By.xpath("//*[@id='pm_target']/div[2]/div[1]/div[3]/div/img[6]")), task1).build().perform();
+		(new Actions(Browser.driver())).dragAndDrop(Browser.getElement("designer.webElement.parallelJoin"), task1).build().perform();
 
 		(new Actions(Browser.driver())).dragAndDropBy(task2, 0, 0).build().perform();
 
@@ -208,7 +208,7 @@ public class Designer{
 
 		Actions action = new Actions(Browser.driver());
 				
-		(new Actions(Browser.driver())).dragAndDrop(Browser.driver().findElement(By.xpath("//*[@id='pm_target']/div[2]/div[1]/div[3]/div/img[7]")), task).build().perform();
+		(new Actions(Browser.driver())).dragAndDrop(Browser.getElement("designer.webElement.endTask"), task).build().perform();
 	
 		return true;
 	}
@@ -222,7 +222,7 @@ public class Designer{
 
 
 	public WebElement getTask(String taskName) throws Exception{
-		WebElement designPanel = Browser.driver().findElement(By.xpath("//div[@id='pm_target']/div[1]/div[1]/div[3]"));
+		WebElement designPanel = Browser.getElement("designer.webElement.designPanel");
 		return designPanel.findElement(By.xpath("div[@class='processmap_task___processmaker'][div[1]='"+taskName.trim()+"']"));
 	}
 
@@ -336,7 +336,7 @@ public class Designer{
 			String taskDurationUnti, String exeTime, String exeTimeUnit, String subject, String[] mailto, String[] mailcc, String[] mailbcc) throws Exception{
 
 		openMenuEvent();
-		WebElement eventMessageElem = Browser.driver().findElement(By.xpath("/html/body/div[4]/div[1]/div[2]"));
+		WebElement eventMessageElem = Browser.getElement("designer.webElement.eventMessage");
 		if(eventMessageElem.getText().equals("Intermediate message"))
 		{
 			eventMessageElem.click();
@@ -356,7 +356,7 @@ public class Designer{
 			String taskDurationUnti, String exeTime, String exeTimeUnit, String trigger, String condition) throws Exception{
 		Browser.driver().switchTo().frame("frameMain");
 		openMenuEvent();
-		WebElement eventMessageElem = Browser.driver().findElement(By.xpath("/html/body/div[4]/div[2]/div[2]"));
+		WebElement eventMessageElem = Browser.getElement("designer.webElement.eventConditional");
 		if(eventMessageElem.getText().equals("Intermediate Conditional"))
 		{
 			eventMessageElem.click();
@@ -377,7 +377,7 @@ public class Designer{
 			String taskDurationUnti, String exeTime, String exeTimeUnit, String trigger) throws Exception{
 		//Browser.driver().switchTo().frame("frameMain");
 		openMenuEvent();
-		WebElement eventMessageElem = Browser.driver().findElement(By.xpath("/html/body/div[4]/div[3]/div[2]"));
+		WebElement eventMessageElem = Browser.getElement("designer.webElement.eventTimer");
 		
 		if(eventMessageElem.getText().equals("Intermediate timer"))
 		{
@@ -446,9 +446,9 @@ public class Designer{
 
 		Actions action = new Actions(Browser.driver());
 		Thread.sleep(5000);
-		WebElement gridPanel = Browser.driver().findElement(By.id("pm_target"));
+		WebElement gridPanel = Browser.getElement("designer.webElement.gridPanel");
 		action.contextClick(gridPanel).perform();
-		WebElement eventElem = Browser.driver().findElement(By.xpath("/html/body/div[2]/div[17]"));
+		WebElement eventElem = Browser.getElement("designer.webElement.openMenuEvent");
 
 		if(eventElem.getText().equals("Events"))
 		{

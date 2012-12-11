@@ -23,7 +23,7 @@ public class TaskProperties{
 		WebElement task = Pages.Designer().getTask(taskProperties.taskName);
 		action.contextClick(task).perform();
 
-		WebElement property = Browser.driver().findElement(By.xpath("//div[2]/div[7]/div[2]"));
+		WebElement property = Browser.getElement("taskProperties.webElement.properties");
 
 		if(property.getText().equals("Properties"))
 		{
@@ -41,7 +41,7 @@ public class TaskProperties{
 
 	public boolean definition(TaskFieldData taskProperties)  throws Exception{
 
-		WebElement def = Browser.driver().findElement(By.xpath("//div[1]/div[1]/div[4]/div[1]"));
+		WebElement def = Browser.getElement("taskProperties.webElement.definition");
 		if(def.getText().equals("Definition"))
 		{
 			def.click();
@@ -52,11 +52,11 @@ public class TaskProperties{
 		}
 
 
-		WebElement title = Browser.driver().findElement(By.id("form[TAS_TITLE]"));
-		WebElement description = Browser.driver().findElement(By.id("form[TAS_DESCRIPTION]"));
-		WebElement casePriority = Browser.driver().findElement(By.id("form[TAS_PRIORITY_VARIABLE]"));
-		WebElement routingScreen = Browser.driver().findElement(By.id("form[TAS_DERIVATION_SCREEN_TPL]"));
-		WebElement starting = Browser.driver().findElement(By.id("form[TAS_START]"));
+		WebElement title = Browser.getElement("taskProperties.webElement.taskTitle");
+		WebElement description = Browser.getElement("taskProperties.webElement.taskDescription");
+		WebElement casePriority = Browser.getElement("taskProperties.webElement.taskPriority");
+		WebElement routingScreen = Browser.getElement("taskProperties.webElement.taskDerivation");
+		WebElement starting = Browser.getElement("taskProperties.webElement.taskStart");
 
 		title.sendKeys(taskProperties.title);
 		description.sendKeys(taskProperties.description);
@@ -71,7 +71,7 @@ public class TaskProperties{
 	}
 
 	public boolean assignmentRules(TaskFieldData taskProperties)  throws Exception{
-		WebElement assign = Browser.driver().findElement(By.xpath("//div[1]/div[1]/div[4]/div[2]"));
+		WebElement assign = Browser.getElement("taskProperties.webElement.assignmentRules");
 		if(assign.getText().equals("Assignment rules"))
 		{
 			assign.click();
@@ -91,16 +91,16 @@ public class TaskProperties{
 	}
 
 	public void timingControl(TaskFieldData taskProperties)  throws Exception{
-		WebElement timing = Browser.driver().findElement(By.xpath("//div[1]/div[1]/div[4]/div[3]"));
+		WebElement timing = Browser.getElement("taskProperties.webElement.timingControl");
 		if(timing.getText().equals("Timing control"))
 		{
 			timing.click();
 		}		
-		WebElement allowUser = Browser.driver().findElement(By.id("form[TAS_TRANSFER_FLY]"));
-		WebElement duration = Browser.driver().findElement(By.id("form[TAS_DURATION]"));
-		WebElement tUnit = Browser.driver().findElement(By.id("form[TAS_TIMEUNIT]"));
-		WebElement countD = Browser.driver().findElement(By.id("form[TAS_TYPE_DAY]"));
-		WebElement clndr = Browser.driver().findElement(By.id("form[TAS_CALENDAR]"));
+		WebElement allowUser = Browser.getElement("taskProperties.webElement.allowUser");
+		WebElement duration = Browser.getElement("taskProperties.webElement.taskDuration");
+		WebElement tUnit = Browser.getElement("taskProperties.webElement.timeUnit");
+		WebElement countD = Browser.getElement("taskProperties.webElement.typeDay");
+		WebElement clndr = Browser.getElement("taskProperties.webElement.calendar");
 		if(taskProperties.allowUserDefined==true)
 		{
 			allowUser.click();
@@ -116,12 +116,12 @@ public class TaskProperties{
 	}
 
 	public void permissions(TaskFieldData taskProperties)  throws Exception{
-		WebElement perm = Browser.driver().findElement(By.xpath("//div[1]/div[1]/div[4]/div[4]"));
+		WebElement perm = Browser.getElement("taskProperties.webElement.permisions");
 		if(perm.getText().equals("Permissions"))
 		{
 			perm.click();
 		}
-		WebElement allowArb = Browser.driver().findElement(By.id("form[TAS_TYPE]"));
+		WebElement allowArb = Browser.getElement("taskProperties.webElement.allowArbitrary");
 
 		if(taskProperties.allowArbitrary==true)
 			allowArb.click();
@@ -129,27 +129,27 @@ public class TaskProperties{
 	}
 
 	public void caseLabels(TaskFieldData taskProperties)  throws Exception{
-		WebElement caselbl = Browser.driver().findElement(By.xpath("//div[1]/div[1]/div[4]/div[5]"));
+		WebElement caselbl = Browser.getElement("taskProperties.webElement.caseLabels");
 		if(caselbl.getText().equals("Case Labels"))
 		{
 			caselbl.click();
 		}
-		WebElement cTitle = Browser.driver().findElement(By.id("form[TAS_DEF_TITLE]"));
-		WebElement cDescription = Browser.driver().findElement(By.id("form[TAS_DEF_DESCRIPTION]"));
+		WebElement cTitle = Browser.getElement("taskProperties.webElement.caseTitle");
+		WebElement cDescription = Browser.getElement("taskProperties.webElement.caseDescription");
 		cTitle.sendKeys(taskProperties.caseTitle);
 		cDescription.sendKeys(taskProperties.caseDescription);
 	}
 
 	public void notifications(TaskFieldData taskProperties)  throws Exception{
-		WebElement notif = Browser.driver().findElement(By.xpath("//div[1]/div[1]/div[4]/div[6]"));
+		WebElement notif = Browser.getElement("taskProperties.webElement.notifications");
 		if(notif.getText().equals("Notifications"))
 		{
 			notif.click();
 		}
-		WebElement afterRoutDer =Browser.driver().findElement(By.id("form[SEND_EMAIL]"));
-		WebElement sbjct = Browser.driver().findElement(By.id("form[TAS_DEF_SUBJECT_MESSAGE]"));
-		WebElement content = Browser.driver().findElement(By.id("form[TAS_DEF_MESSAGE_TYPE]"));
-		WebElement msg = Browser.driver().findElement(By.id("form[TAS_DEF_MESSAGE]"));
+		WebElement afterRoutDer =Browser.getElement("taskProperties.webElement.afterRoute");
+		WebElement sbjct = Browser.getElement("taskProperties.webElement.subject");
+		WebElement content = Browser.getElement("taskProperties.webElement.content");
+		WebElement msg = Browser.getElement("taskProperties.webElement.message");
 		if(taskProperties.afterRouting==true){
 			afterRoutDer.click();
 			sbjct.sendKeys(taskProperties.subject);
@@ -161,10 +161,10 @@ public class TaskProperties{
 	}
 
 	public void save()  throws Exception{
-		WebElement btnSave = Browser.driver().findElement(By.xpath("//div[1]/div[1]/div[6]/div[1]/input[1]"));
+		WebElement btnSave = Browser.getElement("taskProperties.webElement.btnSave");
 		btnSave.click();
 		Thread.sleep(1000);
-		WebElement btnAccept = Browser.driver().findElement(By.xpath("//div[1]/div[1]/div[6]/div[1]/input"));
+		WebElement btnAccept = Browser.getElement("taskProperties.webElement.btnAccept");
 		btnAccept.click();
 		
 	}
