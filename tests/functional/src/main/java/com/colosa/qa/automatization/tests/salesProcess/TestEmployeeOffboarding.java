@@ -57,7 +57,7 @@ public class TestEmployeeOffboarding{
 		arrayData[5].fieldValue = "emp@test.com";
 		arrayData[6].fieldPath = "form[Last_day]";
 		arrayData[6].fieldFindType = FieldKeyType.ID;
-		arrayData[6].fieldType = "readonly";
+		arrayData[6].fieldType = FieldType.READONLY;
 		arrayData[6].fieldValue = "12/12/2012";
 		arrayData[7].fieldPath = "form[Change_Emp_Details_Submit]";
 		arrayData[7].fieldFindType = FieldKeyType.ID;

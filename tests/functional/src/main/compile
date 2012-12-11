@@ -31,4 +31,17 @@ javac -cp .:./resources/libs/*:./resources/selenium-java.jar:./java/:./resources
 javac -cp .:./resources/libs/*:./resources/selenium-java.jar:./java/:./resources/junit.jar ./java/com/colosa/qa/automatization/tests/outputDocuments/TestOutputDocProcess.java
 
 #compile tests designer
+javac -cp .:./resources/libs/*:./resources/selenium-java.jar:./java/:./resources/junit.jar ./java/com/colosa/qa/automatization/tests/derivationRules/*.java
+
+javac -cp .:./resources/libs/*:./resources/selenium-java.jar:./java/:./resources/junit.jar ./java/com/colosa/qa/automatization/tests/documents/*.java
+
+javac -cp .:./resources/libs/*:./resources/selenium-java.jar:./java/:./resources/junit.jar ./java/com/colosa/qa/automatization/tests/processDesigner/*.java
+
+javac -cp .:./resources/libs/*:./resources/selenium-java.jar:./java/:./resources/junit.jar ./java/com/colosa/qa/automatization/tests/processExecutionForDerivationRules/*.java
+
 javac -cp .:./resources/libs/*:./resources/selenium-java.jar:./java/:./resources/junit.jar ./java/com/colosa/qa/automatization/tests/processExecutionForEvents/*.java
+
+javac -cp .:./resources/libs/*:./resources/selenium-java.jar:./java/:./resources/junit.jar ./java/com/colosa/qa/automatization/tests/salesProcess/*.java
+
+javac -cp .:./resources/libs/*:./resources/selenium-java.jar:./java/:./resources/junit.jar ./java/com/colosa/qa/automatization/tests/triggersProcess/*.java
+

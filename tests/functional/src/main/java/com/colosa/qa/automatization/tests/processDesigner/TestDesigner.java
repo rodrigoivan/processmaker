@@ -31,7 +31,7 @@ public class TestDesigner{
 		Pages.Designer().createTask();
 		Pages.Designer().moveTask("Task 5", 0, -150);*/
 		Pages.Designer().initialTask("Task 1");		
-		String[] tasksListArray = {"Task 2"};
+		String[][] tasksListArray = {{"Task 2",""}};
 		Pages.Designer().evaluation("Task 1", tasksListArray);					
 
 	}
