@@ -52,9 +52,14 @@ public class TestProcessIntermediateMessageMultipleTask{
 
 	@Test
 	public void continueCase() throws FileNotFoundException, IOException, Exception{
-
+		String eventStatus= "";
 		Pages.Login().gotoUrl();
 		Pages.Login().loginUser("hector", "sample", "");
+		Pages.Main().goHome();
+		Pages.Main().goAdmin();		
+		Pages.Admin().goToLogs();
+		eventStatus = Pages.Admin().eventStatus(caseNum);
+		Assert.assertEquals("CLOSE", eventStatus);
 		Pages.Main().goHome();
 		Pages.Home().openCase(caseNum);
 		FormFieldData[] arrayData = new FormFieldData[1];

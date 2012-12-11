@@ -76,7 +76,7 @@ public class ProcessList extends Page{
 		WebElement exportbtn = menulist.get(6).findElement(By.xpath("table/tbody/tr[2]/td[2]/em/button"));
 
 		ExtJSGrid extGrid = new ExtJSGrid(grid, Browser.driver());
-		WebElement pager = Browser.driver().findElement(By.xpath("//div[@id='processesGrid']/div/div[3]/div/table/tbody/tr/td[1]/table/tbody/tr"));
+		WebElement pager = Browser.driver().findElement(By.xpath("//div[@id='processesGrid']/div/div[3]/div/table/tbody/tr/td[1]/table/tbody/tr"));//no funciona al crear su variable en el default.conf
 		List<WebElement> wl;
 		int index = 1;
 		int pages = Integer.parseInt(pager.findElement(By.xpath("td[6]/div")).getText().trim().substring(3));
@@ -132,7 +132,7 @@ public class ProcessList extends Page{
 		WebElement inputfile = Browser.getElement("designerList.webelement.inputfile");
 		inputfile.sendKeys(filePath);
 
-		Browser.driver().findElement(By.xpath("//div[@id='uploader']/div[2]/div[2]/div/div/div/div[1]/table/tbody/tr/td[2]/table/tbody/tr/td[1]/table/tbody/tr/td[1]/table/tbody/tr[2]/td[2]/em/button")).click();
+		Browser.driver().findElement(By.xpath("//div[@id='uploader']/div[2]/div[2]/div/div/div/div[1]/table/tbody/tr/td[2]/table/tbody/tr/td[1]/table/tbody/tr/td[1]/table/tbody/tr[2]/td[2]/em/button")).click();//no funciona al crear su variable en el default.conf
 
 		System.out.println("-------fin-------");		
 		
@@ -143,13 +143,13 @@ public class ProcessList extends Page{
 
 		Browser.driver().switchTo().frame("frameMain");
 		WebElement grid = Browser.getElement("designerList.webelement.Process");		
-		List<WebElement> menulist = grid.findElements(By.xpath("div/div[1]/div/table/tbody/tr/td[1]/table/tbody/tr/td"));
+		List<WebElement> menulist = grid.findElements(By.xpath("div/div[1]/div/table/tbody/tr/td[1]/table/tbody/tr/td"));//no funciona al crear su variable en el default.conf
 		WebElement importbtn = menulist.get(0).findElement(By.xpath("table/tbody/tr[2]/td[2]/em/button"));
 		importbtn.click();
 
 		Browser.getElement("designerList.webelement.processName").sendKeys(processName);
 		Browser.getElement("designerList.webelement.description").sendKeys(description);
-		Browser.driver().findElement(By.xpath("//div[@id='newProcessForm']/div/div/div[1]/table/tbody/tr/td[2]/table/tbody/tr/td[1]/table/tbody/tr/td[1]/table/tbody/tr[2]/td[2]/em/button")).click();		
+		Browser.driver().findElement(By.xpath("//div[@id='newProcessForm']/div/div/div[1]/table/tbody/tr/td[2]/table/tbody/tr/td[1]/table/tbody/tr/td[1]/table/tbody/tr[2]/td[2]/em/button")).click();//no funciona al crear su variable en el default.conf
 				
 	}
 
