@@ -54,9 +54,15 @@ public class TestEventSingleTask{
 }
 
 	public void openTask2(int casenumber) throws Exception{
+		String eventStatus= "";
 		Pages.Login().gotoUrl();
 		Pages.Login().loginUser("iver","sample","");
-    Pages.Main().goHome();
+    	Pages.Main().goHome();
+		Pages.Main().goAdmin();		
+		Pages.Admin().goToLogs();
+		eventStatus = Pages.Admin().eventStatus(casenumber);
+		Assert.assertEquals("CLOSE", eventStatus);
+    	Pages.Main().goHome();
 		opencase(casenumber);
 		openCaseFrame();
 		FormFieldData[] fieldArray2=new FormFieldData[2];
