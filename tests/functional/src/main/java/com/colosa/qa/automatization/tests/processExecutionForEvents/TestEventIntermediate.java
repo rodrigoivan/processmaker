@@ -52,7 +52,13 @@ public class TestEventIntermediate{
 
 public void openTask2(int casenumber) throws Exception{
 
-    //Pages.Home().openCase(175);
+    String eventStatus= "";
+    Pages.Main().goHome();
+    Pages.Main().goAdmin();     
+    Pages.Admin().goToLogs();
+    eventStatus = Pages.Admin().eventStatus(casenumber);
+    Assert.assertEquals("CLOSE", eventStatus);
+    Pages.Main().goHome();
     opencase(casenumber);
     openCaseFrame();
     FormFieldData[] fieldArray2=new FormFieldData[2];
