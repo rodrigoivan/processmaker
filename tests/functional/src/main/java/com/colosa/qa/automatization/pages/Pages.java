@@ -20,6 +20,12 @@ public class Pages{
 		return page;
 	}
 
+	public static Admin Admin() throws Exception{
+		Admin page = new Admin();
+
+		return page;
+	}
+
 	public static Documents Documents() throws Exception{
 		Documents document = new Documents();
 
