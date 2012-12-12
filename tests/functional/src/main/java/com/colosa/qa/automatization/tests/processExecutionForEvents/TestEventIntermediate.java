@@ -1,4 +1,4 @@
-package com.colosa.qa.automatization.tests.processExecutionForEvents;
+package com.colosa.qa.automatization.tests.EventIntermediate;
 
 import org.junit.Assert;
 import org.junit.AfterClass;
@@ -52,13 +52,7 @@ public class TestEventIntermediate{
 
 public void openTask2(int casenumber) throws Exception{
 
-    String eventStatus= "";
-    Pages.Main().goHome();
-    Pages.Main().goAdmin();     
-    Pages.Admin().goToLogs();
-    eventStatus = Pages.Admin().eventStatus(casenumber);
-    Assert.assertEquals("CLOSE", eventStatus);
-    Pages.Main().goHome();
+
     opencase(casenumber);
     openCaseFrame();
     FormFieldData[] fieldArray2=new FormFieldData[2];
@@ -82,7 +76,7 @@ public void openTask2(int casenumber) throws Exception{
 }
 
 public void openTask3(int casenumber) throws Exception{
-	 //Pages.Home().openCase(176);
+	
     opencase(casenumber);
 	 openCaseFrame();
 	 FormFieldData[] fieldArray3=new FormFieldData[1];
@@ -100,7 +94,7 @@ public void openTask3(int casenumber) throws Exception{
 }
 
 public void openTask4(int casenumber) throws Exception{
-	 //Pages.Home().openCase(177);
+	 
     opencase(casenumber);
 	 openCaseFrame();
 	 FormFieldData[] fieldArray4=new FormFieldData[2];

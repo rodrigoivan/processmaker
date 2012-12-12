@@ -1,4 +1,4 @@
-package com.colosa.qa.automatization.tests.salesProcess;
+package com.colosa.qa.automatization.tests.HiringProcess;
 
 import org.junit.Assert;
 import org.junit.AfterClass;

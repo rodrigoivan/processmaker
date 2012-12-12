@@ -1,4 +1,4 @@
-package com.colosa.qa.automatization.tests.processExecutionForDerivationRules;
+package com.colosa.qa.automatization.tests.ParalellFork;
 
 import org.junit.Assert;
 import org.junit.AfterClass;
@@ -46,7 +46,7 @@ public void runProcess() throws Exception{
 	fieldArray[3].fieldValue="";
 
 	FormFiller.formFillElements(fieldArray);
-	Assert.assertTrue("button continue does not exist in this dynaform", Browser.elementExists("TestParalellFork.webelement.continue"));
+	Assert.assertTrue(Pages.InputDocProcess().continuebtn());
    Pages.InputDocProcess().continuebtn();
 	Pages.Main().logout();
 	openTask2(casenumber);
@@ -69,7 +69,7 @@ Pages.Login().gotoUrl();
 	fieldArray1[0].fieldValue="";
 
 	FormFiller.formFillElements(fieldArray1);
-	Assert.assertTrue("button continue does not exist in this dynaform", Browser.elementExists("TestParalellFork.webelement.continue"));
+	Assert.assertTrue(Pages.InputDocProcess().continuebtn());
    Pages.InputDocProcess().continuebtn();
 	Pages.Main().logout();
 	openTask3(casenumber);
@@ -100,7 +100,7 @@ public void openTask3(int casenumber) throws Exception{
 	fieldArray2[1].fieldValue="";
 
 	FormFiller.formFillElements(fieldArray2);
-	Assert.assertTrue("button continue does not exist in this dynaform", Browser.elementExists("TestParalellFork.webelement.continue"));
+	Assert.assertTrue(Pages.InputDocProcess().continuebtn());
    Pages.InputDocProcess().continuebtn();
 	Pages.Main().logout();
 	openTask4(casenumber);
@@ -129,7 +129,7 @@ public void openTask4(int casenumber) throws Exception{
 	fieldArray3[1].fieldValue="";
 
 	FormFiller.formFillElements(fieldArray3);
-	Assert.assertTrue("button continue does not exist in this dynaform", Browser.elementExists("TestSimpleProcess.webelement.continue"));
+	Assert.assertTrue(Pages.InputDocProcess().continuebtn());
    Pages.InputDocProcess().continuebtn();
 	Pages.Main().logout();
 	openTask5(casenumber);
@@ -164,7 +164,7 @@ public void openTask5(int casenumber) throws Exception{
 	fieldArray4[2].fieldValue="";
 
 	FormFiller.formFillElements(fieldArray4);
-	Assert.assertTrue("button continue does not exist in this dynaform", Browser.elementExists("TestParalellFork.webelement.continue"));
+	Assert.assertTrue(Pages.InputDocProcess().continuebtn());
    Pages.InputDocProcess().continuebtn();
 }
 

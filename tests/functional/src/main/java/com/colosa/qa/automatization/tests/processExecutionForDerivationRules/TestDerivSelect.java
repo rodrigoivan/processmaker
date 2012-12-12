@@ -1,4 +1,4 @@
-package com.colosa.qa.automatization.tests.processExecutionForDerivationRules;
+package com.colosa.qa.automatization.tests.DerivSelect;
 
 import org.junit.Assert;
 import org.junit.AfterClass;
@@ -47,7 +47,7 @@ import java.io.IOException;
     fieldArray[3].fieldValue="";
 
     FormFiller.formFillElements(fieldArray);
-    Assert.assertTrue("button continue does not exist in this dynaform", Browser.elementExists("TestDerivSelect.webelement.continue"));
+   Assert.assertTrue(Pages.InputDocProcess().continuebtn());
    Pages.InputDocProcess().continuebtn();
    Pages.Home().gotoInbox();
     Assert.assertTrue("The case does not exist in inbox", Pages.Home().existCase(casenumber));
@@ -62,7 +62,7 @@ import java.io.IOException;
     fieldArray1[0].fieldValue="";
 
     FormFiller.formFillElements(fieldArray1);
-     Assert.assertTrue("button continue does not exist in this dynaform", Browser.elementExists("TestSimpleProcess.webelement.continue"));
+    Assert.assertTrue(Pages.InputDocProcess().continuebtn());
     Pages.InputDocProcess().continuebtn();
 
 
