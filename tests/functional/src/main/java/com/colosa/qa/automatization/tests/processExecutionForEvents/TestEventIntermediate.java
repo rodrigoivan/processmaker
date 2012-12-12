@@ -1,4 +1,4 @@
-package com.colosa.qa.automatization.tests.EventIntermediate;
+package com.colosa.qa.automatization.tests.processExecutionForEvents;
 
 import org.junit.Assert;
 import org.junit.AfterClass;

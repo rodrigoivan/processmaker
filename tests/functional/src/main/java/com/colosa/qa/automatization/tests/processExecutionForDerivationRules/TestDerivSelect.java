@@ -1,4 +1,4 @@
-package com.colosa.qa.automatization.tests.DerivSelect;
+package com.colosa.qa.automatization.tests.processExecutionForDerivationRules;
 
 import org.junit.Assert;
 import org.junit.AfterClass;

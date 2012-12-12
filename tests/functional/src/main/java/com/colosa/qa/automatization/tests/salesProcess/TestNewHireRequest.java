@@ -21,9 +21,9 @@ public class TestNewHireRequest{
 		Pages.Login().gotoUrl();
 		Pages.Login().loginUser("hector", "sample", "workflow");
 		Pages.Main().goHome();	
-		caseNum = Pages.Home().startCase("a) New Hire Request v_3 (Request for new hire)");
+		caseNum = Pages.Home().startCase("New Hire Request v_1 (Request for new hire)");
 
-		FormFieldData[] arrayData = new FormFieldData[7];
+		FormFieldData[] arrayData = new FormFieldData[8];
 		arrayData[0] = new FormFieldData();
 		arrayData[1] = new FormFieldData();
 		arrayData[2] = new FormFieldData();
@@ -34,33 +34,37 @@ public class TestNewHireRequest{
 		arrayData[7] = new FormFieldData();
 
 		arrayData[0].fieldPath = "form[reqPropDate]";
-		arrayData[0].fieldFindType = FieldKeyType.ID;
-		arrayData[0].fieldType = FieldType.TEXTBOX;
+		arrayData[0].fieldFindType = "id";
+		arrayData[0].fieldType = "textbox";
 		arrayData[0].fieldValue = "2012-12-12";
 		arrayData[1].fieldPath = "form[reqPosition]";
-		arrayData[1].fieldFindType = FieldKeyType.ID;
-		arrayData[1].fieldType = FieldType.TEXTBOX;
+		arrayData[1].fieldFindType = "id";
+		arrayData[1].fieldType = "textbox";
 		arrayData[1].fieldValue = "Prueba...";
 		arrayData[2].fieldPath = "form[reqSalary]";
-		arrayData[2].fieldFindType = FieldKeyType.ID;
-		arrayData[2].fieldType = FieldType.TEXTBOX;
-		arrayData[2].fieldValue = "23564";		
-		arrayData[3].fieldPath = "form[reqJDesc]";
-		arrayData[3].fieldFindType = FieldKeyType.ID;
-		arrayData[3].fieldType = FieldType.TEXTAREA;
-		arrayData[3].fieldValue = "Prueba...";
-		arrayData[4].fieldPath = "form[reqJQual]";
-		arrayData[4].fieldFindType = FieldKeyType.ID;
-		arrayData[4].fieldType = FieldType.TEXTAREA;
+		arrayData[2].fieldFindType = "id";
+		arrayData[2].fieldType = "textbox";
+		arrayData[2].fieldValue = "23564";
+		arrayData[3].fieldPath = "form[reqApplicant]";
+		arrayData[3].fieldFindType = "id";
+		arrayData[3].fieldType = "textbox";
+		arrayData[3].fieldValue = "3";
+		arrayData[4].fieldPath = "form[reqJDesc]";
+		arrayData[4].fieldFindType = "id";
+		arrayData[4].fieldType = "textarea";
 		arrayData[4].fieldValue = "Prueba...";
-		arrayData[5].fieldPath = "form[reqComments]";
-		arrayData[5].fieldFindType = FieldKeyType.ID;
-		arrayData[5].fieldType = FieldType.TEXTAREA;
+		arrayData[5].fieldPath = "form[reqJQual]";
+		arrayData[5].fieldFindType = "id";
+		arrayData[5].fieldType = "textarea";
 		arrayData[5].fieldValue = "Prueba...";
-		arrayData[6].fieldPath = "form[Submit]";
-		arrayData[6].fieldFindType = FieldKeyType.ID;
-		arrayData[6].fieldType = FieldType.BUTTON;
-		arrayData[6].fieldValue = "";
+		arrayData[6].fieldPath = "form[reqComments]";
+		arrayData[6].fieldFindType = "id";
+		arrayData[6].fieldType = "textarea";
+		arrayData[6].fieldValue = "Prueba...";
+		arrayData[7].fieldPath = "form[Submit]";
+		arrayData[7].fieldFindType = "id";
+		arrayData[7].fieldType = "button";
+		arrayData[7].fieldValue = "";
 		Pages.InputDocProcess().openCaseFrame();
 		Assert.assertTrue(FormFiller.formFillElements(arrayData));
 		Assert.assertTrue(Pages.InputDocProcess().continuebtn());
@@ -79,12 +83,12 @@ public class TestNewHireRequest{
 		arrayData[1] = new FormFieldData();
 
 		arrayData[0].fieldPath = "form[apRequest]";
-		arrayData[0].fieldFindType = FieldKeyType.ID;
-		arrayData[0].fieldType = FieldType.DROPDOWN;
+		arrayData[0].fieldFindType = "id";
+		arrayData[0].fieldType = "dropdown";
 		arrayData[0].fieldValue = approve;
 		arrayData[1].fieldPath = "form[Submit]";
-		arrayData[1].fieldFindType = FieldKeyType.ID;
-		arrayData[1].fieldType = FieldType.BUTTON;
+		arrayData[1].fieldFindType = "id";
+		arrayData[1].fieldType = "button";
 		arrayData[1].fieldValue = "";
 		Pages.InputDocProcess().openCaseFrame();
 		Assert.assertTrue(FormFiller.formFillElements(arrayData));
@@ -105,16 +109,16 @@ public class TestNewHireRequest{
 		arrayData[2] = new FormFieldData();
 
 		arrayData[0].fieldPath = "form[bgRequest]";
-		arrayData[0].fieldFindType = FieldKeyType.ID;
-		arrayData[0].fieldType = FieldType.DROPDOWN;
+		arrayData[0].fieldFindType = "id";
+		arrayData[0].fieldType = "dropdown";
 		arrayData[0].fieldValue = approve2;
 		arrayData[1].fieldPath = "form[bgSalary]";
-		arrayData[1].fieldFindType = FieldKeyType.ID;
-		arrayData[1].fieldType = FieldType.TEXTBOX;
+		arrayData[1].fieldFindType = "id";
+		arrayData[1].fieldType = "textbox";
 		arrayData[1].fieldValue = "2456";
 		arrayData[2].fieldPath = "form[BGSubmit]";
-		arrayData[2].fieldFindType = FieldKeyType.ID;
-		arrayData[2].fieldType = FieldType.BUTTON;
+		arrayData[2].fieldFindType = "id";
+		arrayData[2].fieldType = "button";
 		arrayData[2].fieldValue = "";
 		Pages.InputDocProcess().openCaseFrame();
 		Assert.assertTrue(FormFiller.formFillElements(arrayData));
@@ -139,32 +143,32 @@ public class TestNewHireRequest{
 		arrayData[4] = new FormFieldData();
 
 		arrayData[0].fieldPath = "form[propAdvertising][2]";
-		arrayData[0].fieldFindType = FieldKeyType.ID;
-		arrayData[0].fieldType = FieldType.CHECK;
+		arrayData[0].fieldFindType = "id";
+		arrayData[0].fieldType = "check";
 		arrayData[0].fieldValue = "";
 		arrayData[1].fieldPath = "form[propAdvertising][3]";
-		arrayData[1].fieldFindType = FieldKeyType.ID;
-		arrayData[1].fieldType = FieldType.CHECK;
+		arrayData[1].fieldFindType = "id";
+		arrayData[1].fieldType = "check";
 		arrayData[1].fieldValue = "";
 		arrayData[2].fieldPath = "form[Position_ID]";
-		arrayData[2].fieldFindType = FieldKeyType.ID;
-		arrayData[2].fieldType = FieldType.TEXTBOX;
+		arrayData[2].fieldFindType = "id";
+		arrayData[2].fieldType = "textbox";
 		arrayData[2].fieldValue = "AB-123";
 		arrayData[3].fieldPath = "form[propStartDate]";
-		arrayData[3].fieldFindType = FieldKeyType.ID;
-		arrayData[3].fieldType = FieldType.TEXTBOX;
+		arrayData[3].fieldFindType = "id";
+		arrayData[3].fieldType = "textbox";
 		arrayData[3].fieldValue = "2012-12-29";
 		arrayData[4].fieldPath = "form[Submit]";
-		arrayData[4].fieldFindType = FieldKeyType.ID;
-		arrayData[4].fieldType = FieldType.BUTTON;
+		arrayData[4].fieldFindType = "id";
+		arrayData[4].fieldType = "button";
 		arrayData[4].fieldValue = "";
 
 		FormFieldData[] arrayData2 = new FormFieldData[1];
 		arrayData2[0] = new FormFieldData();
 
 		arrayData2[0].fieldPath = "form[submit]";
-		arrayData2[0].fieldFindType = FieldKeyType.ID;
-		arrayData2[0].fieldType = FieldType.BUTTON;
+		arrayData2[0].fieldFindType = "id";
+		arrayData2[0].fieldType = "button";
 		arrayData2[0].fieldValue = "";
 
 		Pages.InputDocProcess().openCaseFrame();
@@ -184,21 +188,20 @@ public class TestNewHireRequest{
 		arrayData[2] = new FormFieldData();
 		
 		arrayData[0].fieldPath = "form[propEndDate]";
-		arrayData[0].fieldFindType = FieldKeyType.ID;
-		arrayData[0].fieldType = FieldType.TEXTBOX;
+		arrayData[0].fieldFindType = "id";
+		arrayData[0].fieldType = "textbox";
 		arrayData[0].fieldValue = "2013-12-29";
 		arrayData[1].fieldPath = "form[propStatus]";
-		arrayData[1].fieldFindType = FieldKeyType.ID;
-		arrayData[1].fieldType = FieldType.DROPDOWN;
+		arrayData[1].fieldFindType = "id";
+		arrayData[1].fieldType = "dropdown";
 		arrayData[1].fieldValue = "Open";
 		arrayData[2].fieldPath = "form[Submit]";
-		arrayData[2].fieldFindType = FieldKeyType.ID;
-		arrayData[2].fieldType = FieldType.BUTTON;
+		arrayData[2].fieldFindType = "id";
+		arrayData[2].fieldType = "button";
 		arrayData[2].fieldValue = "";
 
 		Pages.InputDocProcess().openCaseFrame();
 		Assert.assertTrue(FormFiller.formFillElements(arrayData));
-		Assert.assertTrue(Pages.InputDocProcess().continuebtn());
 		Assert.assertTrue(Pages.InputDocProcess().continuebtn());
 
 	}
