@@ -70,7 +70,7 @@ public class TestEmployeeOnboarding{
 		arrayData2[1] = new FormFieldData();
 		arrayData2[0].fieldPath = "form[Emp_DOB]";
 		arrayData2[0].fieldFindType = FieldKeyType.ID;
-		arrayData2[0].fieldType = "readonly";
+		arrayData2[0].fieldType = FieldType.READONLY;
 		arrayData2[0].fieldValue = "12/12/1980";
 		arrayData2[1].fieldPath = "form[Emp_Info_Submit]";
 		arrayData2[1].fieldFindType = FieldKeyType.ID;
@@ -105,7 +105,7 @@ public class TestEmployeeOnboarding{
 		arrayData3[3].fieldValue = "2000";
 		arrayData3[4].fieldPath = "form[Emp_Start_Date]";
 		arrayData3[4].fieldFindType = FieldKeyType.ID;
-		arrayData3[4].fieldType = "readonly";
+		arrayData3[4].fieldType = FieldType.READONLY;
 		arrayData3[4].fieldValue = "12/12/2012";
 		arrayData3[5].fieldPath = "form[Emp_Department]";
 		arrayData3[5].fieldFindType = FieldKeyType.ID;
@@ -244,7 +244,7 @@ public class TestEmployeeOnboarding{
 		arrayData[0].fieldValue = "Employee Induction";
 		arrayData[1].fieldPath = "form[Select_Training][1][Date_Of_Course]";
 		arrayData[1].fieldFindType = FieldKeyType.ID;
-		arrayData[1].fieldType = "readonly";
+		arrayData[1].fieldType = FieldType.READONLY;
 		arrayData[1].fieldValue = "12/12/2012";
 		arrayData[2].fieldPath = "form[Select_Training][1][Course_Location]";
 		arrayData[2].fieldFindType = FieldKeyType.ID;

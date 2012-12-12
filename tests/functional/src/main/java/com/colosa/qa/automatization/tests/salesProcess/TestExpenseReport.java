@@ -116,7 +116,7 @@ public class TestExpenseReport{
 		arrayData[16] = new FormFieldData();
 		arrayData[0].fieldPath = "form[repDetail][1][dateRep]";
 		arrayData[0].fieldFindType = FieldKeyType.ID;
-		arrayData[0].fieldType = "readonly";
+		arrayData[0].fieldType = FieldType.READONLY;
 		arrayData[0].fieldValue = "12/12/2012";
 		arrayData[1].fieldPath = "form[repDetail][1][categoryRep]";
 		arrayData[1].fieldFindType = FieldKeyType.ID;
@@ -148,7 +148,7 @@ public class TestExpenseReport{
 		arrayData[7].fieldValue = "Sales";
 		arrayData[8].fieldPath = "form[repDetail][2][dateRep]";
 		arrayData[8].fieldFindType = FieldKeyType.ID;
-		arrayData[8].fieldType = "readonly";
+		arrayData[8].fieldType = FieldType.READONLY;
 		arrayData[8].fieldValue = "31/12/2012";
 		arrayData[9].fieldPath = "form[repDetail][2][categoryRep]";
 		arrayData[9].fieldFindType = FieldKeyType.ID;

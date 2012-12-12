@@ -21,9 +21,9 @@ public class TestNewHireRequest{
 		Pages.Login().gotoUrl();
 		Pages.Login().loginUser("hector", "sample", "workflow");
 		Pages.Main().goHome();	
-		caseNum = Pages.Home().startCase("New Hire Request v_1 (Request for new hire)");
+		caseNum = Pages.Home().startCase("a) New Hire Request v_3 (Request for new hire)");
 
-		FormFieldData[] arrayData = new FormFieldData[8];
+		FormFieldData[] arrayData = new FormFieldData[7];
 		arrayData[0] = new FormFieldData();
 		arrayData[1] = new FormFieldData();
 		arrayData[2] = new FormFieldData();
@@ -44,27 +44,23 @@ public class TestNewHireRequest{
 		arrayData[2].fieldPath = "form[reqSalary]";
 		arrayData[2].fieldFindType = FieldKeyType.ID;
 		arrayData[2].fieldType = FieldType.TEXTBOX;
-		arrayData[2].fieldValue = "23564";
-		arrayData[3].fieldPath = "form[reqApplicant]";
+		arrayData[2].fieldValue = "23564";		
+		arrayData[3].fieldPath = "form[reqJDesc]";
 		arrayData[3].fieldFindType = FieldKeyType.ID;
-		arrayData[3].fieldType = FieldType.TEXTBOX;
-		arrayData[3].fieldValue = "3";
-		arrayData[4].fieldPath = "form[reqJDesc]";
+		arrayData[3].fieldType = FieldType.TEXTAREA;
+		arrayData[3].fieldValue = "Prueba...";
+		arrayData[4].fieldPath = "form[reqJQual]";
 		arrayData[4].fieldFindType = FieldKeyType.ID;
 		arrayData[4].fieldType = FieldType.TEXTAREA;
 		arrayData[4].fieldValue = "Prueba...";
-		arrayData[5].fieldPath = "form[reqJQual]";
+		arrayData[5].fieldPath = "form[reqComments]";
 		arrayData[5].fieldFindType = FieldKeyType.ID;
 		arrayData[5].fieldType = FieldType.TEXTAREA;
 		arrayData[5].fieldValue = "Prueba...";
-		arrayData[6].fieldPath = "form[reqComments]";
+		arrayData[6].fieldPath = "form[Submit]";
 		arrayData[6].fieldFindType = FieldKeyType.ID;
-		arrayData[6].fieldType = FieldType.TEXTAREA;
-		arrayData[6].fieldValue = "Prueba...";
-		arrayData[7].fieldPath = "form[Submit]";
-		arrayData[7].fieldFindType = FieldKeyType.ID;
-		arrayData[7].fieldType = FieldType.BUTTON;
-		arrayData[7].fieldValue = "";
+		arrayData[6].fieldType = FieldType.BUTTON;
+		arrayData[6].fieldValue = "";
 		Pages.InputDocProcess().openCaseFrame();
 		Assert.assertTrue(FormFiller.formFillElements(arrayData));
 		Assert.assertTrue(Pages.InputDocProcess().continuebtn());
@@ -202,6 +198,7 @@ public class TestNewHireRequest{
 
 		Pages.InputDocProcess().openCaseFrame();
 		Assert.assertTrue(FormFiller.formFillElements(arrayData));
+		Assert.assertTrue(Pages.InputDocProcess().continuebtn());
 		Assert.assertTrue(Pages.InputDocProcess().continuebtn());
 
 	}
