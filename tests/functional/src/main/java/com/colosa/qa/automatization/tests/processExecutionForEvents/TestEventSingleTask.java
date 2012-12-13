@@ -50,12 +50,17 @@ public class TestEventSingleTask{
     	Assert.assertTrue(Pages.InputDocProcess().continuebtn());
     Pages.Main().logout();
     openTask2(casenumber);
-}
 
-	public void openTask2(int casenumber) throws Exception{
+	//public void openTask2(int casenumber) throws Exception{
+		String eventStatus= "";
 		Pages.Login().gotoUrl();
 		Pages.Login().loginUser("iver","sample","");
-    Pages.Main().goHome();
+		Pages.Main().goHome();
+		Pages.Main().goAdmin();		
+		Pages.Admin().goToLogs();
+		eventStatus = Pages.Admin().eventStatus(casenumber);
+		Assert.assertEquals("CLOSE", eventStatus);
+        Pages.Main().goHome();
 		opencase(casenumber);
 		openCaseFrame();
 		FormFieldData[] fieldArray2=new FormFieldData[2];
@@ -78,9 +83,9 @@ public class TestEventSingleTask{
     Pages.Main().logout();
         openTask3(casenumber);
 
-	}
+	//}
 
-	public void openTask3(int casenumber) throws Exception{
+	//public void openTask3(int casenumber) throws Exception{
 		Pages.Login().gotoUrl();
 		Pages.Login().loginUser("hector","sample","");
     Pages.Main().goHome();
@@ -104,14 +109,15 @@ public class TestEventSingleTask{
      Assert.assertTrue(FormFiller.formFillElements(fieldArray3));
     	Assert.assertTrue(Pages.InputDocProcess().continuebtn());
     Pages.Main().logout();
-	}
+	//}
 
-	public void openCaseFrame() throws Exception{
+	//public void openCaseFrame() throws Exception{
 	    Browser.driver().switchTo().defaultContent();
 		Browser.driver().switchTo().frame("casesFrame");
 		Browser.driver().switchTo().frame("casesSubFrame");
 		Browser.driver().switchTo().frame("openCaseFrame");
-}
+//}
+	}
 public void opencase(int casenumber)throws Exception{
 Pages.Home().openCase(casenumber);
 }

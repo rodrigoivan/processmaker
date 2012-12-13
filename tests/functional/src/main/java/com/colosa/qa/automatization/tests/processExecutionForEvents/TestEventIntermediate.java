@@ -47,17 +47,25 @@ public class TestEventIntermediate{
 
     Assert.assertTrue(FormFiller.formFillElements(fieldArray));
     Assert.assertTrue(Pages.InputDocProcess().continuebtn());
+    Pages.Main().logout();
     openTask2(casenumber);
 }
 
 public void openTask2(int casenumber) throws Exception{
-
-
-    opencase(casenumber);
-    openCaseFrame();
-    FormFieldData[] fieldArray2=new FormFieldData[2];
-    fieldArray2[0]=new FormFieldData();
-    fieldArray2[1]=new FormFieldData();
+       String eventStatus= "";
+        Pages.Login().gotoUrl();
+        Pages.Login().loginUser("iver","sample","");
+        Pages.Main().goHome();
+        Pages.Main().goAdmin();     
+        Pages.Admin().goToLogs();
+        eventStatus = Pages.Admin().eventStatus(casenumber);
+        Assert.assertEquals("CLOSE", eventStatus);
+        Pages.Main().goHome();
+        opencase(casenumber);
+        openCaseFrame();
+        FormFieldData[] fieldArray2=new FormFieldData[2];
+        fieldArray2[0]=new FormFieldData();
+        fieldArray2[1]=new FormFieldData();
     
     fieldArray2[0].fieldPath="form[estadocivil]";
     fieldArray2[0].fieldFindType=FieldKeyType.ID;
@@ -71,12 +79,15 @@ public void openTask2(int casenumber) throws Exception{
 
      Assert.assertTrue(FormFiller.formFillElements(fieldArray2));
         Assert.assertTrue(Pages.InputDocProcess().continuebtn());
+        Pages.Main().logout();
     openTask3(casenumber);
 
 }
 
 public void openTask3(int casenumber) throws Exception{
-	
+	Pages.Login().gotoUrl();
+        Pages.Login().loginUser("hector","sample","");
+    Pages.Main().goHome();
     opencase(casenumber);
 	 openCaseFrame();
 	 FormFieldData[] fieldArray3=new FormFieldData[1];
@@ -89,12 +100,15 @@ public void openTask3(int casenumber) throws Exception{
 
 	  Assert.assertTrue(FormFiller.formFillElements(fieldArray3));
         Assert.assertTrue(Pages.InputDocProcess().continuebtn());
+        Pages.Main().logout();
     openTask4(casenumber);
 
 }
 
 public void openTask4(int casenumber) throws Exception{
-	 
+	 Pages.Login().gotoUrl();
+        Pages.Login().loginUser("admin","admin","");
+    Pages.Main().goHome();
     opencase(casenumber);
 	 openCaseFrame();
 	 FormFieldData[] fieldArray4=new FormFieldData[2];
