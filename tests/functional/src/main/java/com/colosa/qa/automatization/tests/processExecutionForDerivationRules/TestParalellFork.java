@@ -47,7 +47,6 @@ public void runProcess() throws Exception{
 
 	FormFiller.formFillElements(fieldArray);
 	Assert.assertTrue(Pages.InputDocProcess().continuebtn());
-   Pages.InputDocProcess().continuebtn();
 	Pages.Main().logout();
 	openTask2(casenumber);
 } 
@@ -70,7 +69,6 @@ Pages.Login().gotoUrl();
 
 	FormFiller.formFillElements(fieldArray1);
 	Assert.assertTrue(Pages.InputDocProcess().continuebtn());
-   Pages.InputDocProcess().continuebtn();
 	Pages.Main().logout();
 	openTask3(casenumber);
 
@@ -101,7 +99,6 @@ public void openTask3(int casenumber) throws Exception{
 
 	FormFiller.formFillElements(fieldArray2);
 	Assert.assertTrue(Pages.InputDocProcess().continuebtn());
-   Pages.InputDocProcess().continuebtn();
 	Pages.Main().logout();
 	openTask4(casenumber);
 }
@@ -130,7 +127,6 @@ public void openTask4(int casenumber) throws Exception{
 
 	FormFiller.formFillElements(fieldArray3);
 	Assert.assertTrue(Pages.InputDocProcess().continuebtn());
-   Pages.InputDocProcess().continuebtn();
 	Pages.Main().logout();
 	openTask5(casenumber);
 }
@@ -165,7 +161,7 @@ public void openTask5(int casenumber) throws Exception{
 
 	FormFiller.formFillElements(fieldArray4);
 	Assert.assertTrue(Pages.InputDocProcess().continuebtn());
-   Pages.InputDocProcess().continuebtn();
+	Pages.Main().logout();
 }
 
 public void openCaseFrame() throws Exception{

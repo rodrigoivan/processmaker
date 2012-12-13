@@ -46,7 +46,7 @@ public class TestEventIntermediate{
     fieldArray[3].fieldValue="";
 
     Assert.assertTrue(FormFiller.formFillElements(fieldArray));
-        Assert.assertTrue(Pages.InputDocProcess().continuebtn());
+    Assert.assertTrue(Pages.InputDocProcess().continuebtn());
     openTask2(casenumber);
 }
 
@@ -113,7 +113,7 @@ public void openTask4(int casenumber) throws Exception{
 
 	  Assert.assertTrue(FormFiller.formFillElements(fieldArray4));
         Assert.assertTrue(Pages.InputDocProcess().continuebtn());
-
+Pages.Main().logout();
 
 }
 

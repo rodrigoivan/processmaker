@@ -103,7 +103,7 @@ public class TestEventSingleTask{
 
      Assert.assertTrue(FormFiller.formFillElements(fieldArray3));
     	Assert.assertTrue(Pages.InputDocProcess().continuebtn());
-    Pages.InputDocProcess().continuebtn();
+    Pages.Main().logout();
 	}
 
 	public void openCaseFrame() throws Exception{

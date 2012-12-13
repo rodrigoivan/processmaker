@@ -48,7 +48,6 @@ import java.io.IOException;
 
     FormFiller.formFillElements(fieldArray);
    Assert.assertTrue(Pages.InputDocProcess().continuebtn());
-   Pages.InputDocProcess().continuebtn();
    Pages.Home().gotoInbox();
     Assert.assertTrue("The case does not exist in inbox", Pages.Home().existCase(casenumber));
     Pages.Home().openCase(casenumber);
@@ -63,7 +62,7 @@ import java.io.IOException;
 
     FormFiller.formFillElements(fieldArray1);
     Assert.assertTrue(Pages.InputDocProcess().continuebtn());
-    Pages.InputDocProcess().continuebtn();
+    Pages.Main().logout();
 
 
  	}
